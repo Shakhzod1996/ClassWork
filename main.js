@@ -83,65 +83,6 @@ let arr = [
     ],
   },
 
-  {
-    id: 7,
-    avatar: "../../imgs/nature7.jpg",
-    name: "Ramazon",
-    view: "50w",
-    media: [
-      "../../imgs/slide8.jpg",
-      " ../../video/first.mp4",
-      "../../imgs/seven1.jpg",
-    ],
-  },
-
-  {
-    id: 7,
-    avatar: "../../imgs/nature7.jpg",
-    name: "Ramazon",
-    view: "50w",
-    media: [
-      "../../imgs/slide8.jpg",
-      " ../../video/first.mp4",
-      "../../imgs/seven1.jpg",
-    ],
-  },
-
-  {
-    id: 7,
-    avatar: "../../imgs/nature7.jpg",
-    name: "Ramazon",
-    view: "50w",
-    media: [
-      "../../imgs/slide8.jpg",
-      " ../../video/first.mp4",
-      "../../imgs/seven1.jpg",
-    ],
-  },
-
-  {
-    id: 7,
-    avatar: "../../imgs/nature7.jpg",
-    name: "Ramazon",
-    view: "50w",
-    media: [
-      "../../imgs/slide8.jpg",
-      " ../../video/first.mp4",
-      "../../imgs/seven1.jpg",
-    ],
-  },
-
-  {
-    id: 7,
-    avatar: "../../imgs/nature7.jpg",
-    name: "Ramazon",
-    view: "50w",
-    media: [
-      "../../imgs/slide8.jpg",
-      " ../../video/first.mp4",
-      "../../imgs/seven1.jpg",
-    ],
-  },
 ];
 
 let ul = document.querySelector(".ul");
@@ -163,10 +104,7 @@ let li = document.querySelectorAll(".li-main");
 let left = document.querySelector(".left-btn");
 let right = document.querySelector(".right-btn");
 
-li[3].classList.add("active");
-
-
-
+li[3].classList.add('active')
 // ?Clicking Right Button
 right.addEventListener("click", () => {
   if (count < arr.length - 1) {
@@ -193,12 +131,4 @@ left.addEventListener("click", () => {
   }
 
   ul.style.transform = `translateX(${-indx * 205}px)`;
-});
-
-li.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    countIn++
-    let li = e.target.parentElement
-    ul.style.transform = `translateX(${-countIn * 205}px)`;
-  });
 });
