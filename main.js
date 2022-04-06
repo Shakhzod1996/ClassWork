@@ -101,12 +101,12 @@ li[3].classList.add("active");
 let count1 = 2;
 let count = 3;
 let count2 = 4;
-let indx = 1;
+let indx = 0;
 
 
 // ?Clicking Right Button
 right.addEventListener("click", () => {
-  if (count < arr.length - 1) {
+  if (count < arr.length-1) {
     indx++
     count2++;
     count++;
@@ -114,12 +114,12 @@ right.addEventListener("click", () => {
     li[count1].classList.remove("active");
     li[count].classList.add("active");
   }
-  ul.style.transform = `translateX(${-indx * 212}px)`
+  ul.style.transform = `translateX(${-indx * 205}px)`
   console.log(indx);
 });
 
 left.addEventListener("click", () => {
-  if (count > 0) {
+  if (count >= 0) {
     indx--
     count1--;
     count2--;
@@ -128,6 +128,6 @@ left.addEventListener("click", () => {
     li[count2].classList.remove("active");
   }
 
-  ul.style.transform = `translateX(${-indx * 212}px)`
+  ul.style.transform = `translateX(${-indx * 205}px)`
 
 });

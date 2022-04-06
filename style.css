@@ -38,7 +38,8 @@ body {
   cursor: pointer;
   border-radius: 5px;
   border-radius: 10px;
-  transition: all .4s ;
+  transition: all .4s linear;
+  transform: scale(1);
 }
 
 .li-main img {
@@ -50,11 +51,12 @@ body {
 
 .active {
   position: relative;
-  width: 350px;
-  height: 500px;
   cursor: pointer;
   border-radius: 5px;
-  gap: 80px;
+  transform: scale(2.2);
+  margin-left: 40px;
+  margin-right: 40px;
+
 }
 
 .buttons {
