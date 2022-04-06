@@ -86,9 +86,15 @@ let arr = [
 
 let ul = document.querySelector(".ul");
 
+let count1 = 2;
+let count = 3;
+let countIn = 3;
+let count2 = 4;
+let indx = 0;
+
 arr.forEach((item) => {
   ul.innerHTML += `
-    <li class='li-main'>
+    <li class='li-main' id=${count}>
       <img src=${item.media[0]}>
     </li>
   `;
@@ -98,29 +104,27 @@ let left = document.querySelector(".left-btn");
 let right = document.querySelector(".right-btn");
 
 li[3].classList.add("active");
-let count1 = 2;
-let count = 3;
-let count2 = 4;
-let indx = 0;
+
 
 
 // ?Clicking Right Button
 right.addEventListener("click", () => {
-  if (count < arr.length-1) {
-    indx++
+  if (count < arr.length - 1) {
+    indx++;
     count2++;
     count++;
     count1++;
     li[count1].classList.remove("active");
     li[count].classList.add("active");
   }
-  ul.style.transform = `translateX(${-indx * 205}px)`
+  ul.style.transform = `translateX(${-indx * 205}px)`;
   console.log(indx);
 });
 
+// ?Click left Button
 left.addEventListener("click", () => {
-  if (count >= 0) {
-    indx--
+  if (count > 0) {
+    indx--;
     count1--;
     count2--;
     count--;
@@ -128,6 +132,13 @@ left.addEventListener("click", () => {
     li[count2].classList.remove("active");
   }
 
-  ul.style.transform = `translateX(${-indx * 205}px)`
+  ul.style.transform = `translateX(${-indx * 205}px)`;
+});
 
+li.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    countIn++
+    let li = e.target.parentElement
+    ul.style.transform = `translateX(${-countIn * 205}px)`;
+  });
 });
