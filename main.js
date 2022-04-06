@@ -84,48 +84,50 @@ let arr = [
   },
 ];
 
-let ul = document.querySelector('.ul')
+let ul = document.querySelector(".ul");
 
-arr.forEach(item => {
+arr.forEach((item) => {
   ul.innerHTML += `
     <li class='li-main'>
       <img src=${item.media[0]}>
     </li>
-  `
-})
-let li = document.querySelectorAll('.li-main')
-let left = document.querySelector('.left-btn')
-let right = document.querySelector('.right-btn')
+  `;
+});
+let li = document.querySelectorAll(".li-main");
+let left = document.querySelector(".left-btn");
+let right = document.querySelector(".right-btn");
 
-li[0].classList.add('active')
-let count = 0 
-let count1 = -1 
-let count2 = 1 
+li[3].classList.add("active");
+let count1 = 2;
+let count = 3;
+let count2 = 4;
+let indx = 1;
 
 
 // ?Clicking Right Button
-right.addEventListener('click', () => {
+right.addEventListener("click", () => {
   if (count < arr.length - 1) {
-    count2++
-    count++
-    count1++
-    li[count1].classList.remove('active')
-    li[count].classList.add('active')
+    indx++
+    count2++;
+    count++;
+    count1++;
+    li[count1].classList.remove("active");
+    li[count].classList.add("active");
   }
+  ul.style.transform = `translateX(${-indx * 212}px)`
+  console.log(indx);
+});
 
-})
-
-left.addEventListener('click', () => {
+left.addEventListener("click", () => {
   if (count > 0) {
-    count1--
-    count2--
-    count--
-    li[count].classList.add('active')
-    li[count2].classList.remove('active')
-
-
+    indx--
+    count1--;
+    count2--;
+    count--;
+    li[count].classList.add("active");
+    li[count2].classList.remove("active");
   }
 
-})
+  ul.style.transform = `translateX(${-indx * 212}px)`
 
-
+});
