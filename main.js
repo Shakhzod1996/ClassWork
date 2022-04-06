@@ -93,6 +93,39 @@ arr.forEach(item => {
     </li>
   `
 })
-
 let li = document.querySelectorAll('.li-main')
-li[3].classList.add('active')
+let left = document.querySelector('.left-btn')
+let right = document.querySelector('.right-btn')
+
+li[0].classList.add('active')
+let count = 0 
+let count1 = -1 
+let count2 = 1 
+
+
+// ?Clicking Right Button
+right.addEventListener('click', () => {
+  if (count < arr.length - 1) {
+    count2++
+    count++
+    count1++
+    li[count1].classList.remove('active')
+    li[count].classList.add('active')
+  }
+
+})
+
+left.addEventListener('click', () => {
+  if (count > 0) {
+    count1--
+    count2--
+    count--
+    li[count].classList.add('active')
+    li[count2].classList.remove('active')
+
+
+  }
+
+})
+
+
