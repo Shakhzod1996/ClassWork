@@ -82,6 +82,66 @@ let arr = [
       "../../imgs/seven1.jpg",
     ],
   },
+
+  {
+    id: 7,
+    avatar: "../../imgs/nature7.jpg",
+    name: "Ramazon",
+    view: "50w",
+    media: [
+      "../../imgs/slide8.jpg",
+      " ../../video/first.mp4",
+      "../../imgs/seven1.jpg",
+    ],
+  },
+
+  {
+    id: 7,
+    avatar: "../../imgs/nature7.jpg",
+    name: "Ramazon",
+    view: "50w",
+    media: [
+      "../../imgs/slide8.jpg",
+      " ../../video/first.mp4",
+      "../../imgs/seven1.jpg",
+    ],
+  },
+
+  {
+    id: 7,
+    avatar: "../../imgs/nature7.jpg",
+    name: "Ramazon",
+    view: "50w",
+    media: [
+      "../../imgs/slide8.jpg",
+      " ../../video/first.mp4",
+      "../../imgs/seven1.jpg",
+    ],
+  },
+
+  {
+    id: 7,
+    avatar: "../../imgs/nature7.jpg",
+    name: "Ramazon",
+    view: "50w",
+    media: [
+      "../../imgs/slide8.jpg",
+      " ../../video/first.mp4",
+      "../../imgs/seven1.jpg",
+    ],
+  },
+
+  {
+    id: 7,
+    avatar: "../../imgs/nature7.jpg",
+    name: "Ramazon",
+    view: "50w",
+    media: [
+      "../../imgs/slide8.jpg",
+      " ../../video/first.mp4",
+      "../../imgs/seven1.jpg",
+    ],
+  },
 ];
 
 let ul = document.querySelector(".ul");
